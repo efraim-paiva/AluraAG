@@ -11,5 +11,14 @@ function alterarStatus(id) {
         buttom.classList.add('dashboard__item__button--return');
         buttom.textContent = 'Devolver';
         game.querySelector('.dashboard__item__img').classList.add('dashboard__item__img--rented');
-    }
+    } alugados();
+}
+
+function alugados() {
+    var alugados = 0;
+    var alugar = document.querySelectorAll('.dashboard__item__button--return');
+    alugar.forEach(function (item) {
+        alugados++;
+        console.log(alugados);
+    });
 }
