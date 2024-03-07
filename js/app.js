@@ -4,12 +4,12 @@ function alterarStatus(id) {
     var buttom = game.querySelector('.dashboard__item__button');
 
     if (buttom.classList.contains('dashboard__item__button--return')) {
-        buttom.textContent = 'Alugar';
         buttom.classList.remove('dashboard__item__button--return');
+        buttom.textContent = 'Alugar';
         game.querySelector('.dashboard__item__img').classList.remove('dashboard__item__img--rented');
     } else {
-        buttom.textContent = 'Devolver';
         buttom.classList.add('dashboard__item__button--return');
+        buttom.textContent = 'Devolver';
         game.querySelector('.dashboard__item__img').classList.add('dashboard__item__img--rented');
     }
 }
