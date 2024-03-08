@@ -4,6 +4,9 @@ function alterarStatus(id) {
     var buttom = game.querySelector('.dashboard__item__button');
 
     if (buttom.classList.contains('dashboard__item__button--return')) {
+        if (confirm('Tem certeza que deseja devolver o jogo?') == false) {
+            return;
+        }
         buttom.classList.remove('dashboard__item__button--return');
         buttom.textContent = 'Alugar';
         game.querySelector('.dashboard__item__img').classList.remove('dashboard__item__img--rented');
